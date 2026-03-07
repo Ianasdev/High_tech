@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #F5A623;
+  --gold-light: #FFD080;
+  --dark: #0A0A0A;
+  --text: #1A1A1A;
+  --muted: #6B7280;
+  --border: #E5E7EB;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: #ffffff;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent horizontal scrolling caused by shadows/offsets */
+html, body { overflow-x: hidden; }
+
+h1, h2, h3, h4 {
+  font-family: sans-serif;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.gold-bg {
+  background-color: var(--gold);
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  background-color: #e0951a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245,166,35,0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: 2px solid var(--gold);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background-color: var(--gold);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.10);
+}
+
+.section-title {
+  font-family: sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.section-subtitle {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+/* Nav */
+.nav-link {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 4px 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.25s;
+}
+
+.nav-link:hover { color: var(--gold); }
+.nav-link:hover::after { width: 100%; }
+
+/* Stats */
+.stat-number {
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+/* New stat card style to match hero image */
+.stat-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 22px;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.stat-card::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 24px;
+  z-index: -1;
+  box-shadow: 0 0 0 10px rgba(245,166,35,0.10), 0 12px 40px rgba(245,166,35,0.12);
+}
+
+.stat-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #352b53;
+  box-shadow: 0 8px 22px rgba(245,166,35,0.08);
+}
+
+.stat-card p.gold-text {
+  color: var(--gold);
+}
+
+.stat-number {
+  font-family: sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+/* Service cards */
+.service-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: all 0.25s ease;
+}
+
+.service-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 12px 40px rgba(245,166,35,0.12);
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(245,166,35,0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* Partners */
+.partner-logo {
+  filter: grayscale(100%);
+  opacity: 0.55;
+  transition: all 0.25s ease;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Divider */
+.gold-divider {
+  width: 56px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+.gold-divider-left {
+  margin: 12px 0 0;
+}
