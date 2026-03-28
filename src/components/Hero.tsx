@@ -60,14 +60,14 @@ export default function Hero() {
 
               <div className="w-full h-px" style={{ background: 'var(--border)' }} />
 
-              <div className="text-center relative z-10">
+             {/*  <div className="text-center relative z-10">
                 <p className="text-sm font-medium" style={{ color: 'var(--muted)' }}>
                   Certified Odoo Implementation
                 </p>
                 <p className="text-sm" style={{ color: 'var(--muted)' }}>
                   & Support Partner
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
