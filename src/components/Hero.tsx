@@ -21,8 +21,8 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6"
               style={{ background: 'rgba(245,166,35,0.1)', color: 'var(--gold)' }}
             >
-              <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'var(--gold)' }} />
-              Odoo Ready Partner
+             {/*  <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'var(--gold)' }} />
+              Odoo Ready Partner */}
             </div>
 
             <h1 className="section-title mb-4" style={{ fontSize: 'clamp(36px, 5vw, 56px)', lineHeight: 1.15 }}>
@@ -48,14 +48,14 @@ export default function Hero() {
           <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div className="relative rounded-2xl p-8 flex flex-col items-center gap-6" style={{ background: 'transparent', boxShadow: 'none', border: 'none', minWidth: '300px' }}>
               
-           {/*   <div className="text-center relative z-10">
+             <div className="text-center relative z-10">
                 <div className="text-5xl font-black mb-1" style={{ fontFamily: 'sans-serif', letterSpacing: '-2px', fontWeight: '900' }}>
                   <span style={{ color: '#2D2540' }}>o</span>
                   <span style={{ color: '#F5A623' }}>doo</span>
                 </div>
                 <div className="text-sm font-semibold px-4 py-1 rounded-full inline-block" style={{ background: '#2D2540', color: '#fff' }}>
                   Ready Partner
-                </div>  */}
+                </div> 
 
               <div className="w-full h-px" style={{ background: 'var(--border)' }} />
 
