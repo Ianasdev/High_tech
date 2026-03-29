@@ -30,7 +30,7 @@ export default function Hero() {
       
             </h1>
 
-            <p className="section-subtitle mb-8" style={{ fontSize: '18px' }}>
+            <p className="section-subtitle mb-8" style={{ fontSize: '18px',color: '#2D2540' }}>
               Your Arm in Digital Transformation.
             </p>
 
