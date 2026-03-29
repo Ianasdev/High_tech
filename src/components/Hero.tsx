@@ -55,7 +55,8 @@ export default function Hero() {
                 </div>
                 <div className="text-sm font-semibold px-4 py-1 rounded-full inline-block" style={{ background: '#2D2540', color: '#fff' }}>
                   Ready Partner
-                </div> 
+                </div>
+              </div>
 
               <div className="w-full h-px" style={{ background: 'var(--border)' }} />
 
